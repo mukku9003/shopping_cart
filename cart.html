@@ -1,51 +1,71 @@
 <!doctype html>
 <html lang="en">
-  	<head>
+	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>Shoping Cart</title>
-  	</head>
-  	<body>
-  		<div class="container-fluid">
-  			<div class="row">
-  				<div class="col-md-10 col-11 mx-auto">
-  					<div class="row mt-5 gx-3">
-  						<!-- product -->
-  						<div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
-  							<div class="card p-4">
-  								<h2 class="py-4 font-weight-bold">Cart Items</h2>
-  								<div class="row">
-  									<!-- cart img -->
-  									<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_div ">
-  										<img src="imgs/img1.jpg" alt="img" class="img-fluid">
-  										
-  									</div>
+	</head>
+	<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+	  	<div class="container-fluid">
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <a class="navbar-brand" href="#">Mj Creation </a>
+		    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="#">Home</a>
+		        </li>
+		        
+		      </ul>
+		      <form class="d-flex">
+		        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+		        <button class="btn btn-outline-success" type="submit">Search</button>
+		      </form>
+		    </div>
+		</div>
+	</nav>
+		<div class="container-fluid mb-5">
+			<div class="row">
+				<div class="col-md-10 col-11 mx-auto">
+					<div class="row mt-5 gx-3">
+						<!-- product -->
+						<div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+							<div class="card p-4">
+								<h2 class="py-4 font-weight-bold">Cart Items</h2>
+								<div class="row">
+									<!-- cart img -->
+									<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_div ">
+										<img src="imgs/img1.jpg" alt="img" class="img-fluid">
+										
+									</div>
 
-  									<!-- product -info -->
-  									<div class="col-md-7 col-11 mx-auto px-4 mt-2">
-  										<div class="row">
-  											<!-- all info -->
-  											<div class="col-6 card-title">
-  												<h4 class="mb-4 product_name"> Funny T-Shirt</h4>
-  												<p class="mb-2">T-SHIRT - WHITE</p>
-  												<p class="mb-2">COLOR : WHITE </p>
-  												<p class="mb-3">SIZE : L</p>
-  											</div>
-  											<!-- selection qty -->
-  											<div class="col-6">
-  												<ul class="pagination justify-content-end set_qty">
-												    <li class="page-item"><button class="page-link"onclick="qty_dicress('qty','itemamt')"><i class="fas fa-minus" ></i></button></li>
+									<!-- product -info -->
+									<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+										<div class="row">
+											<!-- all info -->
+											<div class="col-6 card-title">
+												<h4 class="mb-4 product_name"> Funny T-Shirt</h4>
+												<p class="mb-2">T-SHIRT - WHITE</p>
+												<p class="mb-2">COLOR : WHITE </p>
+												<p class="mb-3">SIZE : L</p>
+											</div>
+											<!-- selection qty -->
+											<div class="col-6">
+												<ul class="pagination justify-content-end set_qty">
+													<li class="page-item"><button class="page-link"onclick="qty_dicress('qty','itemamt')"><i class="fas fa-minus" ></i></button></li>
 
-												    <li class="page-item"><input type="text" name="a" class="page-link" value="0" id="qty"></li>
-												    <li class="page-item"><button class="page-link" onclick="qty_incress('qty','itemamt')" ><i class="fas fa-plus"></i></button></li>
+													<li class="page-item"><input type="text" name="a" class="page-link" value="0" id="qty"></li>
+													<li class="page-item"><button class="page-link" onclick="qty_incress('qty','itemamt')" ><i class="fas fa-plus"></i></button></li>
 
 												</ul>
-  											</div>
-  										</div>
-  										<div class="row">
+											</div>
+										</div>
+										<div class="row">
 											<div class="col-8 d-flex justify-content-between rmv-wish">
 												<p><i class="fas fa-trash-alt"></i> Item Remove</p>
 												<p><i class="fas fa-heart"></i> Move to wish list</p>
@@ -54,42 +74,42 @@
 												<h3>$<span id="itemamt">0.00</span></h3>	
 											</div> 
 
-  										</div>
-  									</div>
-  								</div>
+										</div>
+									</div>
+								</div>
 
-  							</div>
-  							<hr />
-  							<div class="card p-4">
-  								<div class="row">
-  									<!-- cart img -->
-  									<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_div ">
-  										<img src="imgs/img2.jpg" alt="img" class="img-fluid">
-  										
-  									</div>
+							</div>
+							<hr />
+							<div class="card p-4">
+								<div class="row">
+									<!-- cart img -->
+									<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_div ">
+										<img src="imgs/img2.jpg" alt="img" class="img-fluid">
+										
+									</div>
 
-  									<!-- product -info -->
-  									<div class="col-md-7 col-11 mx-auto px-4 mt-2">
-  										<div class="row">
-  											<!-- all info -->
-  											<div class="col-6 card-title">
-  												<h4 class="mb-4 product_name">Dev T-Shirt</h4>
-  												<p class="mb-2">T-SHIRT - Black</p>
-  												<p class="mb-2">COLOR : Black </p>
-  												<p class="mb-3">SIZE : L</p>
-  											</div>
-  											<!-- selection qty -->
-  											<div class="col-6">
-  												<ul class="pagination justify-content-end set_qty">
-												    <li class="page-item"><button class="page-link"onclick="qty_dicress('qty1','itemamt1')"><i class="fas fa-minus" ></i></button></li>
+									<!-- product -info -->
+									<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+										<div class="row">
+											<!-- all info -->
+											<div class="col-6 card-title">
+												<h4 class="mb-4 product_name">Dev T-Shirt</h4>
+												<p class="mb-2">T-SHIRT - Black</p>
+												<p class="mb-2">COLOR : Black </p>
+												<p class="mb-3">SIZE : L</p>
+											</div>
+											<!-- selection qty -->
+											<div class="col-6">
+												<ul class="pagination justify-content-end set_qty">
+													<li class="page-item"><button class="page-link"onclick="qty_dicress('qty1','itemamt1')"><i class="fas fa-minus" ></i></button></li>
 
-												    <li class="page-item"><input type="text" name="a" class="page-link" value="0" id="qty1"></li>
-												    <li class="page-item"><button class="page-link" onclick="qty_incress('qty1','itemamt1')" ><i class="fas fa-plus"></i></button></li>
+													<li class="page-item"><input type="text" name="a" class="page-link" value="0" id="qty1"></li>
+													<li class="page-item"><button class="page-link" onclick="qty_incress('qty1','itemamt1')" ><i class="fas fa-plus"></i></button></li>
 
 												</ul>
-  											</div>
-  										</div>
-  										<div class="row">
+											</div>
+										</div>
+										<div class="row">
 											<div class="col-8 d-flex justify-content-between rmv-wish">
 												<p><i class="fas fa-trash-alt"></i> Item Remove</p>
 												<p><i class="fas fa-heart"></i> Move to wish list</p>
@@ -98,43 +118,43 @@
 												<h3>$<span id="itemamt1">0.00</span></h3>	
 											</div> 
 
-  										</div>
-  									</div>
-  								</div>
+										</div>
+									</div>
+								</div>
 
-  							</div>
+							</div>
 
-  							<hr />
-  							<div class="card p-4">
-  								<div class="row">
-  									<!-- cart img -->
-  									<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_div ">
-  										<img src="imgs/img3.jpg" alt="img" class="img-fluid">
-  										
-  									</div>
+							<hr />
+							<div class="card p-4">
+								<div class="row">
+									<!-- cart img -->
+									<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_div ">
+										<img src="imgs/img3.jpg" alt="img" class="img-fluid">
+										
+									</div>
 
-  									<!-- product -info -->
-  									<div class="col-md-7 col-11 mx-auto px-4 mt-2">
-  										<div class="row">
-  											<!-- all info -->
-  											<div class="col-6 card-title">
-  												<h4 class="mb-4 product_name">Dev T-Shirt</h4>
-  												<p class="mb-2">T-SHIRT - Black</p>
-  												<p class="mb-2">COLOR : Black </p>
-  												<p class="mb-3">SIZE : L</p>
-  											</div>
-  											<!-- selection qty -->
-  											<div class="col-6">
-  												<ul class="pagination justify-content-end set_qty">
-												    <li class="page-item"><button class="page-link"onclick="qty_dicress('qty2','itemamt2')"><i class="fas fa-minus" ></i></button></li>
+									<!-- product -info -->
+									<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+										<div class="row">
+											<!-- all info -->
+											<div class="col-6 card-title">
+												<h4 class="mb-4 product_name">Dev T-Shirt</h4>
+												<p class="mb-2">T-SHIRT - Black</p>
+												<p class="mb-2">COLOR : Black </p>
+												<p class="mb-3">SIZE : L</p>
+											</div>
+											<!-- selection qty -->
+											<div class="col-6">
+												<ul class="pagination justify-content-end set_qty">
+													<li class="page-item"><button class="page-link"onclick="qty_dicress('qty2','itemamt2')"><i class="fas fa-minus" ></i></button></li>
 
-												    <li class="page-item"><input type="text" name="a" class="page-link" value="0" id="qty2"></li>
-												    <li class="page-item"><button class="page-link" onclick="qty_incress('qty2','itemamt2')" ><i class="fas fa-plus"></i></button></li>
+													<li class="page-item"><input type="text" name="a" class="page-link" value="0" id="qty2"></li>
+													<li class="page-item"><button class="page-link" onclick="qty_incress('qty2','itemamt2')" ><i class="fas fa-plus"></i></button></li>
 
 												</ul>
-  											</div>
-  										</div>
-  										<div class="row">
+											</div>
+										</div>
+										<div class="row">
 											<div class="col-8 d-flex justify-content-between rmv-wish">
 												<p><i class="fas fa-trash-alt"></i> Item Remove</p>
 												<p><i class="fas fa-heart"></i> Move to wish list</p>
@@ -143,43 +163,43 @@
 												<h3>$<span id="itemamt2">0.00</span></h3>	
 											</div> 
 
-  										</div>
-  									</div>
-  								</div>
+										</div>
+									</div>
+								</div>
 
-  							</div>
+							</div>
 
-  							<hr />
-  							<div class="card p-4">
-  								<div class="row">
-  									<!-- cart img -->
-  									<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_div ">
-  										<img src="imgs/img1.jpg" alt="img" class="img-fluid">
-  										
-  									</div>
+							<hr />
+							<div class="card p-4">
+								<div class="row">
+									<!-- cart img -->
+									<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_div ">
+										<img src="imgs/img1.jpg" alt="img" class="img-fluid">
+										
+									</div>
 
-  									<!-- product -info -->
-  									<div class="col-md-7 col-11 mx-auto px-4 mt-2">
-  										<div class="row">
-  											<!-- all info -->
-  											<div class="col-6 card-title">
-  												<h4 class="mb-4 product_name">Dev T-Shirt</h4>
-  												<p class="mb-2">T-SHIRT - Black</p>
-  												<p class="mb-2">COLOR : Black </p>
-  												<p class="mb-3">SIZE : L</p>
-  											</div>
-  											<!-- selection qty -->
-  											<div class="col-6">
-  												<ul class="pagination justify-content-end set_qty">
-												    <li class="page-item"><button class="page-link"onclick="qty_dicress('qty3','itemamt3')"><i class="fas fa-minus" ></i></button></li>
+									<!-- product -info -->
+									<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+										<div class="row">
+											<!-- all info -->
+											<div class="col-6 card-title">
+												<h4 class="mb-4 product_name">Dev T-Shirt</h4>
+												<p class="mb-2">T-SHIRT - Black</p>
+												<p class="mb-2">COLOR : Black </p>
+												<p class="mb-3">SIZE : L</p>
+											</div>
+											<!-- selection qty -->
+											<div class="col-6">
+												<ul class="pagination justify-content-end set_qty">
+													<li class="page-item"><button class="page-link"onclick="qty_dicress('qty3','itemamt3')"><i class="fas fa-minus" ></i></button></li>
 
-												    <li class="page-item"><input type="text" name="a" class="page-link" value="0" id="qty3"></li>
-												    <li class="page-item"><button class="page-link" onclick="qty_incress('qty3','itemamt3')" ><i class="fas fa-plus"></i></button></li>
+													<li class="page-item"><input type="text" name="a" class="page-link" value="0" id="qty3"></li>
+													<li class="page-item"><button class="page-link" onclick="qty_incress('qty3','itemamt3')" ><i class="fas fa-plus"></i></button></li>
 
 												</ul>
-  											</div>
-  										</div>
-  										<div class="row">
+											</div>
+										</div>
+										<div class="row">
 											<div class="col-8 d-flex justify-content-between rmv-wish">
 												<p><i class="fas fa-trash-alt"></i> Item Remove</p>
 												<p><i class="fas fa-heart"></i> Move to wish list</p>
@@ -188,142 +208,150 @@
 												<h3>$<span id="itemamt3">0.00</span></h3>	
 											</div> 
 
-  										</div>
-  									</div>
-  								</div>
+										</div>
+									</div>
+								</div>
 
-  							</div>
-  						</div>
-  						<!-- cart info -->
-  						<div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5 mb-md-5">
-  							<div class="cart_cal p-3 shadow bg-white">
-  								<h2 class="product_name mb-5"> Total Amt : </h2>
-  								<div class="price-ind d-flex justify-content-between">
-  									<p>Product Amt </p>
-  									<p>$<span id="product_total_amt">0.00</span></p>
-  								</div>
+							</div>
+						</div>
+						<!-- cart info -->
+						<div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5 mb-md-5">
+							<div class="cart_cal p-3 shadow bg-white">
+								<h2 class="product_name mb-5"> Total Amt : </h2>
+								<div class="price-ind d-flex justify-content-between">
+									<p>Product Amt </p>
+									<p>$<span id="product_total_amt">0.00</span></p>
+								</div>
 
-  								<div class="price-ind d-flex justify-content-between">
-  									<p>Shipping Charge </p>
-  									<p>$<span id="ship_charge">50.0</span></p>
-  								</div>
-  								<hr />
+								<div class="price-ind d-flex justify-content-between">
+									<p>Shipping Charge </p>
+									<p>$<span id="ship_charge">50.0</span></p>
+								</div>
+								<hr />
 								<div class="total_amt d-flex justify-content-between font-weight-bold">
 									<p> The Total Amt of (Inclu VAT) </p>
 									<p>$<span id="total-card-amt">0.00</span></p>
 								</div>	
-  								<button class="btn btn-warning text-uppercase">Checkout</button>
-  							</div>
-  							<div class="discount mt-3 shadow">
-  								<div class="card">
-  									<div class="card-body">
-  										<a class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExp" aria-expanded="false" aria-controls="collapseExp">
-  											Add a discount code (optional)
-  											<span><i class="fas fa-chevron-down pt-1"></i></span>
+								<button class="btn btn-warning text-uppercase">Checkout</button>
+							</div>
+							<div class="discount mt-3 shadow">
+								<div class="card">
+									<div class="card-body">
+										<a class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExp" aria-expanded="false" aria-controls="collapseExp">
+											Add a discount code (optional)
+											<span><i class="fas fa-chevron-down pt-1"></i></span>
 
-  										</a>
-  										<div class="collapse" id="collapseExp">
-  											<div class="mt-3">
-  												<input type="text" name="" id="discount_c" class="form-control font-weight-bold">
-  												<small id="error" class="text-dark mt-3">code mj</small>
-  												
-  											</div>
-  											<button class="btn btn-warning btn-sm mt-3" onclick="discount_code()">Apply</button>
-  											
-  										</div>
-  									</div>
-  									
-  								</div>
+										</a>
+										<div class="collapse" id="collapseExp">
+											<div class="mt-3">
+												<input type="text" name="" id="discount_c" class="form-control font-weight-bold">
+												<small id="error" class="text-dark mt-3">code mj</small>
+												
+											</div>
+											<button class="btn btn-warning btn-sm mt-3" onclick="discount_code()">Apply</button>
+											
+										</div>
+									</div>
+									
+								</div>
 
-  							</div>
-  							<div class="mt-3 shadow p-3 bg-white">
-  									<div class="pt-4">
-  										<h5>Expecxted Delivery Date</h5>
-  										<p> July 29 2020 - July 30 2020 </p>
-  									</div>
-  								</div>
-  						</div>
-  					</div>
-  				</div>
-  				
-  			</div>
-  			
-  		</div>
+							</div>
+							<div class="mt-3 shadow p-3 bg-white">
+									<div class="pt-4">
+										<h5>Expecxted Delivery Date</h5>
+										<p> July 29 2020 - July 30 2020 </p>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+			
+		</div>
+		<footer class="footer mt-auto py-3 bg-light pb-2 mt-4">
+			<div class="container text-center">
+			   <span class="text-muted"> 
+			    	All rights reserved MjCreation@2020
+			    </span>
+			</div>
+		</footer>
 	
 
    
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-  		
-  		<script type="text/javascript">
-  			
-  			var product_total_amt =document.getElementById('product_total_amt');
-  			var total_cart_amt =document.getElementById('total-card-amt');
-  			var ship_charge =document.getElementById('ship_charge');
-  			var discount_c =document.getElementById('discount_c');
+		
+		<script type="text/javascript">
+			
+			var product_total_amt =document.getElementById('product_total_amt');
+			var total_cart_amt =document.getElementById('total-card-amt');
+			var ship_charge =document.getElementById('ship_charge');
+			var discount_c =document.getElementById('discount_c');
 
 
 
-  			
-  			const qty_dicress = (idval, item_amt) =>{
-  				var ogval = document.getElementById(idval);
-  				var item_price = document.getElementById(item_amt);
+			
+			const qty_dicress = (idval, item_amt) =>{
+				var ogval = document.getElementById(idval);
+				var item_price = document.getElementById(item_amt);
 
-  				
-  				if(ogval.value <= 0) {
-  					ogval.value = 0;
-  				} else {
-  					ogval.value = parseInt(ogval.value) - 1;
-  					item_price.innerHTML = parseInt(item_price.innerHTML) - 15;
-  					product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) - 15;
+				
+				if(ogval.value <= 0) {
+					ogval.value = 0;
+				} else {
+					ogval.value = parseInt(ogval.value) - 1;
+					item_price.innerHTML = parseInt(item_price.innerHTML) - 15;
+					product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) - 15;
 
-  					total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(ship_charge.innerHTML);
-
-
-  					ogval.style.background = '#fff';
-  					ogval.style.color = '#000';
-  				}
-  				//console.log(ogval);
-
-  			}
-
-  			const qty_incress = (idval,item_amt) =>{
-  				var ogval = document.getElementById(idval);
-  				var item_price = document.getElementById(item_amt);
-
-  				
-  				if(ogval.value >= 5) {
-
-  					ogval.value = 5;
-  					alert("Max Items Only 5");
-  					ogval.style.background = 'red';
-  					ogval.style.color = '#fff';
-
-  				} else {
-  					ogval.value = parseInt(ogval.value) + 1;
-  					item_price.innerHTML = parseInt(item_price.innerHTML) + 15;
-  					product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) + 15;
-  					total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(ship_charge.innerHTML);
+					total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(ship_charge.innerHTML);
 
 
-  				}
-  				//console.log(ogval);
+					ogval.style.background = '#fff';
+					ogval.style.color = '#000';
+				}
+				//console.log(ogval);
 
-  			}
+			}
 
-  			const discount_code = () => {
-  				let total_amt_crnt = parseInt(total_cart_amt.innerHTML );
-  				let error_throw = document.getElementById('error');
-  				if(discount_c.value == 'MjTech'){
-  					let newtotal_amt = total_amt_crnt - 15;
-  					total_cart_amt.innerHTML = newtotal_amt;
-  					error_throw.innerHTML = 'Code is Valid';
-  				} else {
-  					error_throw.innerHTML = 'Try Again';
-  				}
-  			}
+			const qty_incress = (idval,item_amt) =>{
+				var ogval = document.getElementById(idval);
+				var item_price = document.getElementById(item_amt);
 
-  		</script>
+				
+				if(ogval.value >= 5) {
 
-  	</body>
+					ogval.value = 5;
+					alert("Max Items Only 5");
+					ogval.style.background = 'red';
+					ogval.style.color = '#fff';
+
+				} else {
+					ogval.value = parseInt(ogval.value) + 1;
+					item_price.innerHTML = parseInt(item_price.innerHTML) + 15;
+					product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) + 15;
+					total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(ship_charge.innerHTML);
+
+
+				}
+				//console.log(ogval);
+
+			}
+
+			const discount_code = () => {
+				let total_amt_crnt = parseInt(total_cart_amt.innerHTML );
+				let error_throw = document.getElementById('error');
+				if(discount_c.value == 'MjTech'){
+					let newtotal_amt = total_amt_crnt - 15;
+					total_cart_amt.innerHTML = newtotal_amt;
+					error_throw.innerHTML = 'Code is Valid';
+				} else {
+					error_throw.innerHTML = 'Try Again';
+				}
+			}
+
+		</script>
+
+	</body>
 </html>
