@@ -248,7 +248,7 @@
 												<small id="error" class="text-dark mt-3">code mj</small>
 												
 											</div>
-											<button class="btn btn-warning btn-sm mt-3" onclick="discount_code()">Apply</button>
+											<button class="btn btn-warning btn-sm mt-3 app_pro" id="app_pro" onclick="discount_code()">Apply</button>
 											
 										</div>
 									</div>
@@ -342,10 +342,13 @@
 			const discount_code = () => {
 				let total_amt_crnt = parseInt(total_cart_amt.innerHTML );
 				let error_throw = document.getElementById('error');
+				let app_pro = document.getElementById('app_pro');
+				console.log(app_pro);
 				if(discount_c.value == 'MjTech'){
 					let newtotal_amt = total_amt_crnt - 15;
 					total_cart_amt.innerHTML = newtotal_amt;
 					error_throw.innerHTML = 'Code is Valid';
+					app_pro.disabled = true;
 				} else {
 					error_throw.innerHTML = 'Try Again';
 				}
